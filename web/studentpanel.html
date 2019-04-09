@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Panel</title>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style>
+      body {
+        margin: 0px;
+        border: 0px;
+        background-color: black;
+      }
+
+      .content {
+
+
+        background-color:black;
+        font-size: 20px;
+        color: red;
+        text-align: center;
+
+      }
+      table {
+        width:800px;
+        margin:auto;
+        text-align: center;
+        table-layout: fixed;
+background: red;
+      }
+      table, th, tr, td
+      {
+        padding: 20px;
+        color:white;
+        border: 1px solid #080808;
+        border-collapse: collapse;
+        font-size: 15px;
+        font-family: sans-serif;
+        background:linear-gradent(top,#3c3c3c 0%, #222222 100%);
+        background:webkit-linear-gradent(top,#3c3c3c 0%, #222222 100%);
+
+      }
+      /* th,td{
+        opacity: 1;
+      } */
+      tr:hover{
+        background: orange;
+      }
+
+      .main{
+        height: 40vh;
+        width:100%;
+        background-color:black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @import url('https://fonts.googleapis.com/css?family=Germania+One');
+      .main span{
+        font-family: 'Germania One', cursive;
+        font-size: 100px;
+        font-weight: bolder;
+        animation: animate infinite 2s linear;
+        margin:0 20px;
+        color: white;
+      }
+      .main span:nth-child(1){
+        animation-delay: 0s;
+      }
+      .main span:nth-child(2){
+        animation-delay: 0.2s;
+      }
+      .main span:nth-child(3){
+        animation-delay: 0.4s;
+      }
+      .main span:nth-child(4){
+        animation-delay: 0.6s;
+      }
+      .main span:nth-child(5){
+        animation-delay: 0.8s;
+      }
+      .main span:nth-child(6){
+        animation-delay: 1s;
+      }
+      .main span:nth-child(7){
+        animation-delay: 1.2s;
+      }
+      @keyframes animate {
+        0%{
+          transform:scale(1);
+          text-shadow: 0 0 0px black;
+        }
+        50%{
+
+          transform:scale(1.4);
+          text-shadow: 0 0 10px black,0 0 30px yellow,0 0 60px green ;
+        }
+        100%{
+
+          transform:scale(1);
+          text-shadow: 0 0 0px black;
+        }
+      }
+      .bb{
+      direction:center;
+      
+      }
+      .bb{
+        background-color:black;
+        opacity:0.8;
+        font-size:2em;
+        padding:10px 50px;
+        border:none;
+
+      }
+      .bb:hover{
+        transform:translate(0,-5px);
+        transition:0.5s;
+        box-shadow: -2px 2px 2px lightseagreen,2px -2px 2px red;
+      }
+      a {
+        text-decoration: none;
+        color:white;
+      }
+
+      
+.search-box {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: red;
+ height: 40px;
+ border-radius: 40px;
+ padding: 10px;
+}
+
+.search-box:hover > .search-txt {
+ width: 240px;
+ padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+ background: white;
+ color: black;
+}
+
+.search-btn {
+ color: #e84118;
+ float: right;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background: #2f3640;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.4s;
+ color: white;
+ cursor: pointer;
+}
+
+.search-btn > i {
+ font-size: 30px;
+}
+
+.search-txt {
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: white;
+ font-size: 16px;
+ transition: 0.4s;
+ line-height: 40px;
+ width: 0px;
+ font-weight: bold;
+}﻿
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <span>W</span>
+        <span>E</span>
+        <span>L</span>
+        <span>C</span>
+        <span>O</span>
+        <span>M</span>
+        <span>E</span>
+    </div>
+
+  <div class="content">
+<br>
+<div class="search-box">
+    <input type="text" name="" class="search-txt" placeholder="Type to search"/>
+
+    <a class="search-btn" href="#">
+    <i class="fas fa-search"></i>
+
+    </a>
+
+  </div>
+<br>
+      
+      <br>
+      <br>
+<h2> Student Table</h2>
+
+<br>
+<table border=5>
+  <tr>
+    
+    <th>Name</th>
+    <th>Id</th>
+    <th>Route Id</th>
+    <th>Phone no</th>
+  </tr>
+<!--  <tr>
+    
+    <td>Gaurav</td>
+    <td>1</td>
+    <td>1</td>
+    <td>123</td>
+  </tr>-->
+<!--  <tr>
+    
+    <td>Parmjot</td>
+    <td>2</td>
+    <td>2</td>
+    <td>1234</td>
+  </tr>-->
+<!--  <tr>
+    
+    <td>Kartik</td>
+    <td>3</td>
+    <td>1</td>
+    <td>12345</td>
+  </tr>-->
+  <tr>
+    
+    <td>honey</td>
+    <td>4</td>
+    <td>3</td>
+    <td>123456</td>
+  </tr>
+
+
+</table>
+
+<h2> Driver Table</h2>
+
+<br>
+<table border=5>
+  <tr>
+    
+    <th> Driver Name</th>
+    <th>Driver Id</th>
+    <th>Route Id</th>
+    <th>Phone no</th>
+  </tr>
+  <tr>
+    
+    <td>Aman</td>
+    <td>1</td>
+    <td>1</td>
+    <td>123</td>
+  </tr>
+  <tr>
+    
+    <td>pappu</td>
+    <td>2</td>
+    <td>2</td>
+    <td>1234</td>
+  </tr>
+  <tr>
+    
+    <td>Malky</td>
+    <td>3</td>
+    <td>3</td>
+    <td>12345</td>
+  </tr>
+  <tr>
+    
+    <td>Sukhi</td>
+    <td>4</td>
+    <td>4</td>
+    <td>123456</td>
+  </tr>
+
+</table>
+
+<h2>Route Table</h2>
+
+<br>
+<table border=5>
+  <tr>
+    
+    <th>Route Id</th>
+    <th>Start</th>
+    <th>Stop</th>
+    <th>Driver Id</th>
+  </tr>
+  <tr>
+    
+    <td>1</td>
+    <td>Zirakpur</td>
+    <td>HP</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    
+    <td>2</td>
+    <td>CHD</td>
+    <td>HP</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    
+    <td>3</td>
+    <td>BADDI</td>
+    <td>HP</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    
+    <td>4</td>
+    <td>PKL</td>
+    <td>HP</td>
+    <td>4</td>
+  </tr>
+
+</table>
+
+<br>
+  </div>
+
+<center>  <button type="button" name="button" class="bb"><a href="Login.html">Logout</a></button>
+  </body>
+</html>

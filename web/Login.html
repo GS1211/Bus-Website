@@ -1,0 +1,266 @@
+<html>
+<head>
+
+<style>
+body
+{
+width:0px;
+height: 0px;
+font-family: sans-serif;
+background:  #a9a196 no-repeat;
+}
+.box
+{
+    width:350px;
+    padding:50px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    /* transform: translate(50%,-50%); */
+    background:#fff;
+    text-align: center;
+    box-shadow:0 0 10px 5px #FFDC00, 0 0 20px 10px lime, 0 0 30px 15px maroon;
+    transform:rotate(50deg) translate(-400px,-90%);
+    transform-origin: center -500px;
+    animation: ani 2s forwards;
+    z-index: -1;
+}
+
+  @keyframes ani {
+    100%{
+      transform: rotate(0deg) translate(200px,-50%);
+    }
+  }
+
+.box:hover{
+  position:absolute;
+  transition-duration: 0.5s;
+  transform: translate(50%,-53%);
+  /* box-shadow: 0 0 10px black; */
+  box-shadow:0 0 16px 10px #FFDC00, 0 0 35px 15px lime, 0 0 60px 25px maroon;
+}
+
+.box h1{
+  background-image: url(colors.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: 49px;
+  padding: 0px;
+  margin: 0;
+  letter-spacing: 7px;
+  text-transform: capitalize;
+  -webkit-background-clip: text;
+  font-weight: 400px;
+  text-align: center;
+  color: transparent;
+}
+.box input[type="text"],.box input[type="password"]{
+    border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #d4166d;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: black;
+  font-size: large;
+  border-radius: 24px;
+  transition: 0.25s;
+  text-color:white;
+}
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+width:280px;
+border-color:dodgerblue;
+}
+
+.box input[type="submit"]
+{
+    border:0;
+    background:none;
+    display:block;
+    margin:20px auto;
+    text-align: center;
+    border: 2px solid red;
+    padding:14px 40px;
+    outline: none;
+    color:black;
+    font-size: large;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor:pointer;
+}
+.box input[type="submit"]:hover
+{
+    background:#2ecc71;
+}
+.para {
+  text-align: center;
+
+}
+.para1 {
+  text-align: center;
+
+}
+.dropbtn {
+  background-color: #66ff66;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+.drop select{
+  background-color:red;
+}
+/*http://i68.tinypic.com/9t3d3d.png  */
+
+
+select{
+    border:1px solid dodgerblue;
+    padding: .8rem 3rem .8rem .5rem;
+    border-radius: 5px;
+
+    color:blac5;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    cursor: pointer;
+
+
+}
+
+.imgBgMethod{
+    display: inline-block;
+    position: relative;
+}
+
+.imgBgMethod select{
+    background: #fff url("http://i68.tinypic.com/9t3d3d.png ") no-repeat 95% 50%;
+}
+
+
+
+
+
+select:focus{
+    border: 2px solid blue;
+    outline:none;
+}
+
+select::-ms-expand{
+    display: none;
+}
+.back{
+  background-image: url("BusBackground.jpg");
+  background-size: cover;
+  background-position: -300px 00px;
+  clip-path: ellipse(597px 618px at 16% 21%);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+}
+
+</style>
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!-- <div class="image"> -->
+<div class="back" ></div>
+</img>
+<div class="box" action ="Login.html" method="post">
+<center><h1> Login </h1></center>
+<br>
+<form action="LoginServlet" onsubmit="return validation()" class="bg-light" method="post">
+<input type="text" placeholder="Username" name="uname" id="user" autocomplete="off">
+<span id="username" class="text-danger font-weight-bold"> </span>
+
+<input type="password" placeholder="Password" name="pwd" id="pass" autocomplete="off">
+<span id="passwords" class="text-danger font-weight-bold"> </span>
+<br>
+<br>
+<div class="imgBgMethod">
+    <select name="select">
+    <option>Login Type</option>
+    <option value="Admin">Admin</option>
+    <option value="Student">Student</option>
+    <option value="Teacher">Teacher</option>
+
+  </select>
+</div>
+
+
+<input type="submit" value="Login" name="submit" class="btn btn-success">
+
+</form>
+</div>
+</div>
+<script type="text/javascript">
+function validation(){
+
+  var user = document.getElementById('user').value;
+  var pass = document.getElementById('pass').value;
+  if(user == ""){
+    document.getElementById('username').innerHTML =" ** Please fill the username field";
+    return false;
+  }
+  if((user.length <= 2) || (user.length > 20)) {
+    document.getElementById('username').innerHTML =" ** Username length must be between 2 and 20";
+    return false;
+  }
+  if(!isNaN(user)){
+    document.getElementById('username').innerHTML =" ** only characters are allowed";
+    return false;
+  }
+
+  if(pass == ""){
+    document.getElementById('passwords').innerHTML =" ** Please fill the password field";
+    return false;
+  }
+  if((pass.length <= 5) || (pass.length > 20)) {
+    document.getElementById('passwords').innerHTML =" ** Passwords lenght must be between  5 and 20";
+    return false;
+  }
+}
+</script>
+
+</body>
+</html>

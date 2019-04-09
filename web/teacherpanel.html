@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Panel</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style>
+      body {
+        margin: 0px;
+        border: 0px;
+        background-color: black;
+      }
+      .header{
+        width:100%;
+        height: 150px;
+        background-color: black;
+        color:white;
+        text-align: center;
+      }
+      .main-content {
+        display: flex;
+      }
+      .sidebar {
+        flex:1;
+        height: 560px;
+        background-color: black;
+        border: 1px white;
+        color: orange;
+        font-size:20px;
+        font-family: cursive;
+        padding: 20px 30px;
+        cursor: pointer;
+        width: 100%;
+         transition: 0.5s;
+      }
+
+
+      .content {
+        flex:3;
+        height: 560px;
+        background-color: black;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+      ul li {
+        padding:20px;
+        border-bottom: 2px solid grey;
+        list-style-type: none;
+        color:white;
+
+      }
+      ul li:hover{
+        background-color:dodgerblue;
+        color:white;
+      }
+      .main{
+        height: 40vh;
+        width:100%;
+        background-color:black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @import url('https://fonts.googleapis.com/css?family=Germania+One');
+      .main span{
+        font-family: 'Germania One', cursive;
+        font-size: 100px;
+        font-weight: bolder;
+        animation: animate infinite 2s linear;
+        margin:0 20px;
+        color: white;
+      }
+      .main span:nth-child(1){
+        animation-delay: 0s;
+      }
+      .main span:nth-child(2){
+        animation-delay: 0.2s;
+      }
+      .main span:nth-child(3){
+        animation-delay: 0.4s;
+      }
+      .main span:nth-child(4){
+        animation-delay: 0.6s;
+      }
+      .main span:nth-child(5){
+        animation-delay: 0.8s;
+      }
+      .main span:nth-child(6){
+        animation-delay: 1s;
+      }
+      .main span:nth-child(7){
+        animation-delay: 1.2s;
+      }
+      @keyframes animate {
+        0%{
+          transform:scale(1);
+          text-shadow: 0 0 0px black;
+        }
+        50%{
+
+          transform:scale(1.4);
+          text-shadow: 0 0 10px black,0 0 30px yellow,0 0 60px green ;
+        }
+        100%{
+
+          transform:scale(1);
+          text-shadow: 0 0 0px black;
+        }
+      }
+a {
+  text-decoration: none;
+  color:white;
+}
+
+.search-box {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: red;
+ height: 40px;
+ border-radius: 40px;
+ padding: 10px;
+}
+
+.search-box:hover > .search-txt {
+ width: 240px;
+ padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+ background: white;
+ color: black;
+}
+
+.search-btn {
+ color: #e84118;
+ float: right;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background: #2f3640;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.4s;
+ color: white;
+ cursor: pointer;
+}
+
+.search-btn > i {
+ font-size: 30px;
+}
+
+.search-txt {
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: white;
+ font-size: 16px;
+ transition: 0.4s;
+ line-height: 40px;
+ width: 0px;
+ font-weight: bold;
+}﻿
+.bb{
+direction:center;
+}
+.bb{
+  background-color:black;
+  opacity:0.8;
+  font-size:2em;
+  padding:10px 50px;
+  border:none;
+
+}
+.bb:hover{
+  transform:translate(0,-5px);
+  transition:0.5s;
+  box-shadow: -2px 2px 2px lightseagreen,2px -2px 2px red;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <span>W</span>
+        <span>E</span>
+        <span>L</span>
+        <span>C</span>
+        <span>O</span>
+        <span>M</span>
+        <span>E</span>
+    </div>
+
+<div class="main-content">
+  <div class="sidebar">
+<ul>
+  <li><a class="a" href="studentpanel.jsp">View</a></li>
+   <li><a class="a" href="button.html">Add</a></li>
+   <li><a class="a" href="button.html">Delete</a></li>
+   
+</ul>
+  </div>
+  <div class="content">
+
+    <div class="search-box">
+    <input type="text" name="" class="search-txt" placeholder="Type to search"/>
+
+    <a class="search-btn" href="#">
+    <i class="fas fa-search"></i>
+
+    </a>
+
+  </div>
+
+  <br>
+  <br>
+<br>
+<br>
+<br>
+<img src="A4.jpg" alt="Photo" height="500px" width="85%">
+
+  </div>
+<br><br>
+</div>
+
+<center>  <button type="button" name="button" class="bb"><a href="Login.html">Logout</a></button>
+</center>
+  </body>
+</html>
